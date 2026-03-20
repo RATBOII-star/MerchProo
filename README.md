@@ -276,6 +276,7 @@ Default seeded account:
 
 Role note: self-registration via RegisterForm creates users with default role User (so admin-level screens are only available to seeded/admin users unless you change roles in the DB).
 
+---
 
 #### Group Members and their contributions
 John Vladimir L. Mones
