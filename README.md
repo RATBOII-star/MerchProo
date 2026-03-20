@@ -234,6 +234,41 @@ The app seeds the following administrative user by default on the first run:
 ---
 
 
+Installation / Setup
+Prerequisites
+Windows (WinForms app): net10.0-windows
+.NET 10 SDK (or a compatible .NET SDK that supports net10.0-windows)
+During first build/run, the project will restore packages like EF Core + SQLite.
+Get the project
+Open the repo folder: ITelectFinal/ITelectFinal/
+Ensure you have the file: ITelectFinal.csproj
+Restore dependencies
+From the project folder (where ITelectFinal.csproj is located):
+
+dotnet restore
+Usage (Run the app)
+Run (Debug)
+dotnet run --project "ITelectFinal.csproj"
+Build (Release)
+dotnet build -c Release
+What happens on first run
+On startup, Program.cs calls Data.DbInitializer.EnsureCreatedAndSeed() which:
+
+Creates/ensures the SQLite database schema
+Seeds:
+the default admin user
+sample products/customers/orders/workflow/payment data (per DbInitializer.cs)
+Database file location: Mydatabase.db in the project root (computed by Data/DbPath.cs, falling back to the executable directory).
+
+Log file location: log.txt in the app base directory (written by Utils/Logger.cs).
+
+Login
+Default seeded account:
+
+Username: admin
+Password: admin123
+Role: Admin
+Role note: self-registration via RegisterForm creates users with default role User (so admin-level screens are only available to seeded/admin users unless you change roles in the DB).
 
 
       
