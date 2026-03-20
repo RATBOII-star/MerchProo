@@ -94,6 +94,20 @@ Implements business rules and orchestrates reposity/database operations
      Updates the related OrderStatus based on whether it's fully paid
      Calls WorkflowService to advance worklflow tasks immediat
 
+  Workflow / task progression
+   Services/WorkflowService.cs
+    UpdateWorkflowStatusAsync() updates tasks based on Order.OrderStatus
+    UpdateWorkflowStatusForOrderAsync(orderId) updates tasks for a single order
+
+  Reporting
+   Services/ReportService.cs
+    GetSalesReportAsync() returns SalesReportDTO (total sales + total orders)
+
+   Backup/Restore
+   Services/BackupService.cs
+    BackupAsync() writes backup.json using DTOs/BackupDTO.cs
+    RestoreAsync() reads backup.json and rehydrates entities
+
  
 
 
