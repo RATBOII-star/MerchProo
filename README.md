@@ -102,32 +102,29 @@ Implements business rules and orchestrates repository/database operations.
   - `BackupAsync()` - Writes `backup.json` using `DTOs/BackupDTO.cs`
   - `RestoreAsync()` - Reads `backup.json` and rehydrates entities
 
-3) UI (WinForms Desktop) — root UI + Forms/
+### 3. UI Layer (WinForms Desktop) — root UI + Forms/
 Provides the graphical interface and user flows (login, dashboard, CRUD forms).
 
-Entry / navigation
-- Program.cs
- - Initializes exception logging
- - Calls Data.DbInitializer.EnsureCreatedAndSeed()
- - Launches Form1
- - Form1.cs / RegisterForm.cs
- - Login and registration UI
- - Uses AuthService for authentication
- - Main dashboard + live updates
+- **Entry / Navigation** - `Program.cs`
+  - Initializes exception logging
+  - Calls `Data.DbInitializer.EnsureCreatedAndSeed()`
+  - Launches `Form1.cs`
+  - `Form1.cs` / `RegisterForm.cs` - Login and registration UI
+  - Uses `AuthService` for authentication
+  - Main dashboard + live updates
 
-HomeForm.cs
-- Role-based visibility (Admin, Cashier, Prod. Staff / Prod Staff)
- - Auto-refresh timer (~3 seconds) to:
- - Refresh sales chart + summary (uses ReportService and also direct EF queries)
- - Refresh workflow board (uses WorkflowService + WorkflowTaskRepository)
- - Feature forms
+- **Home Dashboard** - `HomeForm.cs`
+  - **Role-based visibility** - (Admin, Cashier, Prod. Staff)
+  - **Auto-refresh timer** (~3 seconds) to:
+    - Refresh sales chart + summary (uses `ReportService` and direct EF queries)
+    - Refresh workflow board (uses `WorkflowService` + `WorkflowTaskRepository`)
 
-In Forms/:
-- Orders: OrderForm.cs, AdminOrdersForm.cs
- - Payments: PaymentForm.cs, AdminPaymentsForm.cs
- - Customers: CustomerForm.cs
- - Workflow tasks: WorkflowTaskForm.cs
- - Reports: ReportsForm.cs
+- **Feature Forms** - Located in `Forms/`
+  - **Orders:** `OrderForm.cs`, `AdminOrdersForm.cs`
+  - **Payments:** `PaymentForm.cs`, `AdminPaymentsForm.cs`
+  - **Customers:** `CustomerForm.cs`
+  - **Workflow tasks:** `WorkflowTaskForm.cs`
+  - **Reports:** `ReportsForm.cs`
 
 4) Forms
 Not present in this repository (this project is a WinForms desktop app using local SQLite).
