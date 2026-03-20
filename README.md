@@ -16,3 +16,5 @@ It promotes economic growth by
 
 --Reducing manual errors and workload for employees
 
+System Architecture
+
