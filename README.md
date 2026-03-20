@@ -22,31 +22,30 @@ It promotes economic growth by
 
 - Reducing manual errors and workload for employees
 
-**System Architecture**
+### System Architecture
 
-├── bin/         
-├── Data/         
-├── DTO/     
-├──Forms/
-├── Models/         
-├── obj/         
-├── Repositories/     
+```text
+ITelectFinal/
+├── bin/
+├── Data/
+├── DTO/
+├── Forms/
+│   └── Models/
+├── obj/
+├── Repositories/
 ├── Services/
-├── Utils/         
-├── Data/         
-
-├── DTO/     
-├──Forms1.cs
-├──Forms1.Designer.cs
-├──Forms1.resx
-├──Homeform.Designer.cs
-├──ItelectFinal.csproj
-├──ItelectFinal.csproj.user
-├──Mydatabase
-├──Program.cs
-├──RegisterForm.cs
-├──RegisterForm.Designer.cs
-
+│   └── Utils/
+├── Forms1.cs
+├── Forms1.Designer.cs
+├── Forms1.resx
+├── Homeform.Designer.cs
+├── ItelectFinal.csproj
+├── ItelectFinal.csproj.user
+├── Mydatabase
+├── Program.cs
+├── RegisterForm.cs
+└── RegisterForm.Designer.cs
+```
 ---
 
 **Architecture Layers**
