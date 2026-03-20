@@ -170,7 +170,7 @@ graph LR
 - **Customers:** Add and manage customers through `CustomerForm` (stored in **SQLite** via EF Core repositories).
 - **Products:** Seeded automatically at startup (e.g., `T-Shirt`, `Cap`, `Mug`, `Tote Bag`, `Notebook`).
 
-3. Order Management
+### 3. Order Management
 
 - Create orders from OrderForm
 - Business rules enforced by OrderService
@@ -179,46 +179,46 @@ graph LR
 - Validates allowed statuses when updating (Pending, Processing, Completed, Cancelled)
 - Orders are displayed/consumed across the UI and drive workflow state updates
 
-4. Payment System
-Record payments via PaymentForm
-PaymentService logic:
-Validates payment input
-Saves Payment
-Updates the linked OrderStatus:
-Completed when amountPaid >= order.TotalAmount
+### 4. Payment System
+- Record payments via PaymentForm
+-PaymentService logic:
+-Validates payment input
+-Saves Payment
+-Updates the linked OrderStatus:
+-Completed when amountPaid >= order.TotalAmount
 otherwise Processing
-Advances workflow tasks immediately using WorkflowService
+-Advances workflow tasks immediately using WorkflowService
 
-5. Workflow Tracking
+### 5. Workflow Tracking
 
-Workflow tasks are stored in WorkflowTask and updated by WorkflowService
+- Workflow tasks are stored in WorkflowTask and updated by WorkflowService
 
 HomeForm auto-refreshes every ~3 seconds and shows:
 Pending / InProgress / Completed workflow lists
 Workflow state is derived from each order’s OrderStatus
 
-6. Analytics & Reporting (Dashboard)
+### 6. Analytics & Reporting (Dashboard)
 - ReportService.GetSalesReportAsync() returns simple metrics:
 Total sales, total orders
 - HomeForm builds a sales chart from Payments grouped by date (last 7 days)
 
-7. Backup / Restore (Internal Service)
-BackupService can export/import backup.json using BackupDTO
-This exists in Services/BackupService.cs, but I don’t see it wired into a UI form in the current project.
-Login Instructions (Desktop App)
-Default Test Accounts (pre-seeded)
-The app seeds only the following user by default on first run:
+### 7. Backup / Restore (Internal Service)
+- BackupService can export/import backup.json using BackupDTO
+- This exists in Services/BackupService.cs, but I don’t see it wired into a UI form in the current project.
+- Login Instructions (Desktop App)
+- Default Test Accounts (pre-seeded)
+- The app seeds only the following user by default on first run:
 
-Username	Password	Role
-admin	admin123	Admin
-Creating Other Accounts
-Use the Sign Up button in the app (RegisterForm)
-Newly registered users get role User by default (not Cashier / Borrower / etc. — those roles don’t exist in this system)
-Admin accounts must be created directly in the database if you want additional Admin users (or you can modify role values after registration)
-How to Run / Login (WinForms)
-Run the desktop app:
+- Username	Password	Role
+- admin	admin123	Admin
+- Creating Other Accounts
+- Use the Sign Up button in the app (RegisterForm)
+- Newly registered users get role User by default (not Cashier / Borrower / etc. — those roles don’t exist in this system)
+- Admin accounts must be created directly in the database if you want additional Admin users (or you can modify role values after registration)
+- How to Run / Login (WinForms)
+- Run the desktop app:
 dotnet run --project ITelectFinal.csproj
-Login with:
+- Login with:
 admin / admin123
 
 
