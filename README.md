@@ -47,6 +47,7 @@ It promotes economic growth by
 ├──RegisterForm.cs
 ├──RegisterForm.Designer.cs
 
+---
 
 **Architecture Layers**
 
@@ -70,6 +71,8 @@ Handles all database operations using Entity Framework Core with SQLite.
   - `WorkflowTaskRepository.cs`
 
 - **Migrations/** - Database schema versioning
+
+---
    
 ### 2. Business Logic Layer (BLL)
 Implements business rules and orchestrates repository/database operations.
@@ -102,6 +105,8 @@ Implements business rules and orchestrates repository/database operations.
   - `BackupAsync()` - Writes `backup.json` using `DTOs/BackupDTO.cs`
   - `RestoreAsync()` - Reads `backup.json` and rehydrates entities
 
+---
+
 ### 3. UI Layer (WinForms Desktop) — root UI + Forms/
 Provides the graphical interface and user flows (login, dashboard, CRUD forms).
 
@@ -125,6 +130,7 @@ Provides the graphical interface and user flows (login, dashboard, CRUD forms).
   - **Customers:** `CustomerForm.cs`
   - **Workflow tasks:** `WorkflowTaskForm.cs`
   - **Reports:** `ReportsForm.cs`
+---
 
 ### 4. Core System Functionality
 Mapped flow across the application layers.
@@ -152,6 +158,7 @@ graph LR
     BLL --> DAL[Repositories / DAL]
     DAL --> DB[(SQLite Database)]
 ```
+---
 
 ### 1. User Authentication & Authorization
 - **Login screen:** `Form1` authenticates users via `AuthService.Login(username, password)`
