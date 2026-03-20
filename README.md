@@ -172,13 +172,18 @@ graph LR
 
 ### 3. Order Management
 
-- Create orders from OrderForm
-- Business rules enforced by OrderService
-- Creates Order + OrderItems
-- Sets OrderStatus to Pending initially
-- Validates allowed statuses when updating (Pending, Processing, Completed, Cancelled)
-- Orders are displayed/consumed across the UI and drive workflow state updates
-
+- **Products** — seeded automatically at startup (e.g., "T-Shirt", "Cap", "Mug", "Tote Bag", "Notebook")
+- **Order creation** — performed through **`OrderForm`**
+- **OrderService** enforces business rules:
+  - Creates **`Order`** and associated **`OrderItems`**
+  - Sets initial status to **Pending**
+  - Validates allowed status transitions:
+    - **Pending** → **Processing** or **Cancelled**
+    - **Processing** → **Completed** or **Cancelled**
+    - **Completed** and **Cancelled** are terminal states
+- Orders are displayed in the UI (dashboard, order lists) with current status
+- Status changes immediately trigger next workflow tasks via **`WorkflowService`**
+  
 ### 4. Payment System
 - Record payments via PaymentForm
 -PaymentService logic:
