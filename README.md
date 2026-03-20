@@ -6,7 +6,7 @@ The project is designed to simulate an enterprise-level development environment.
 
 The system supports Sustainable Development Goal 8 (Decent Work and Economic Growth) by improving business efficiency, supporting small-scale merchandise operations, and enabling better job productivity through automation and organized workflows.
 
-It promotes economic growth by:
+It promotes economic growth by
 
 --Streamlining order and payment processes
 
