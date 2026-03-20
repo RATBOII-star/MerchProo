@@ -50,63 +50,64 @@ It promotes economic growth by
 **Architecture Layers**
 
 **1.Data Access Layer**
+Handles all database operations using Entity Framework Core with SQLite.
 
-Entities in Models\
-  User(Authentication + role).cs
-  Customer.cs
-  Product.cs
-  Order.cs + OrderItem
-  Payment.cs
-  WorkflowTask.cs
+- Entities / Domain models
+ - Entities in Models\
+ - User(Authentication + role).cs
+ - Customer.cs
+ - Product.cs
+ - Order.cs + OrderItem
+ - Payment.cs
+ - WorkflowTask.cs
 
 Repositories
- Located in Repositories/
-   UserRepository.cs
-   CustomerRepository.cs
-   ProductRepository.cs
-   OrderRepository.cs
-   PaymentRepository.cs
-   WorkflowTaskRepository.cs
+- Located in Repositories/
+ - UserRepository.cs
+ - CustomerRepository.cs
+ - ProductRepository.cs
+ - OrderRepository.cs
+ - PaymentRepository.cs
+ - WorkflowTaskRepository.cs
    
-       
 2.Business Logix Layer
 Implements business rules and orchestrates reposity/database operations
 
- Authentication
-   Services/AuthService.cs
-     HashPassword() (SHA256)
-     Login() sets Utils.Session.CurrentUser
-     Register() creates new users with a role
+Authentication
+- Services/AuthService.cs
+ - HashPassword() (SHA256)
+ - Login() sets Utils.Session.CurrentUser
+ - Register() creates new users with a role
  
- Order Management
-   Services/Orderservice.cs
-     CreateOrder(...)
-     Validate input
-     Creates Order + OrderItems and sets TotalAmount
-     Creates an initial WorkflowTask if Missing
-   UpdateOrderStatus
-     Enforces allowed Statuses Pending, Processing, Completed, Cancelled
+Order Management
+- Services/Orderservice.cs
+ - CreateOrder(...)
+ - Validate input
+ - Creates Order + OrderItems and sets TotalAmount
+ - Creates an initial WorkflowTask if Missing
+ - UpdateOrderStatus
+ - Enforces allowed Statuses Pending, Processing, Completed, Cancelled
 
-  Payment Processing
-   ServicesNewPaymentAsync(...)
-     Validates amount and payment method
-     Creates Payment
-     Updates the related OrderStatus based on whether it's fully paid
-     Calls WorkflowService to advance worklflow tasks immediat
+Payment Processing
+ServicesNewPaymentAsync(...)
+Validates amount and payment method
+Creates Payment
+Updates the related OrderStatus based on whether it's fully paid
+Calls WorkflowService to advance worklflow tasks immediat
 
-  Workflow / task progression
-   Services/WorkflowService.cs
-     UpdateWorkflowStatusAsync() updates tasks based on Order.OrderStatus
-     UpdateWorkflowStatusForOrderAsync(orderId) updates tasks for a single order
+Workflow / task progression
+Services/WorkflowService.cs
+UpdateWorkflowStatusAsync() updates tasks based on Order.OrderStatus
+UpdateWorkflowStatusForOrderAsync(orderId) updates tasks for a single order
 
-  Reporting
-   Services/ReportService.cs
-     GetSalesReportAsync() returns SalesReportDTO (total sales + total orders)
+Reporting
+Services/ReportService.cs
+GetSalesReportAsync() returns SalesReportDTO (total sales + total orders)
 
-  Backup/Restore
-   Services/BackupService.cs
-    BackupAsync() writes backup.json using DTOs/BackupDTO.cs
-    RestoreAsync() reads backup.json and rehydrates entities
+Backup/Restore
+Services/BackupService.cs
+BackupAsync() writes backup.json using DTOs/BackupDTO.cs
+RestoreAsync() reads backup.json and rehydrates entities
 
 3) UI (WinForms Desktop) — root UI + Forms/
 Provides the graphical interface and user flows (login, dashboard, CRUD forms).
@@ -139,14 +140,14 @@ Reports: ReportsForm.cs
 4) Forms
 Not present in this repository (this project is a WinForms desktop app using local SQLite).
 
-  Core System Functionality (mapped to the layers)
+Core System Functionality (mapped to the layers)
 - User authentication & role handling: Form1/RegisterForm → AuthService → UserRepository/AppDbContext
-    Order lifecycle: OrderService enforces allowed status transitions + initializes workflow tasks
-    Payment lifecycle: PaymentService records payments, updates order status, advances workflow
-    Workflow tracking: WorkflowService keeps WorkflowTask in sync with OrderStatus
-    Analytics: ReportService returns SalesReportDTO, displayed in HomeForm
-    Backup/restore: BackupService produces/consumes backup.json
-    If you want, I can also generate a simple diagram (Mermaid) showing: WinForms UI → Services (BLL) →    Repositories/EF Core (DAL) → SQLite.
+Order lifecycle: OrderService enforces allowed status transitions + initializes workflow tasks
+Payment lifecycle: PaymentService records payments, updates order status, advances workflow
+Workflow tracking: WorkflowService keeps WorkflowTask in sync with OrderStatus
+Analytics: ReportService returns SalesReportDTO, displayed in HomeForm
+Backup/restore: BackupService produces/consumes backup.json
+If you want, I can also generate a simple diagram (Mermaid) showing: WinForms UI → Services (BLL) →    Repositories/EF Core (DAL) → SQLite.
  
 
 
