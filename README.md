@@ -148,7 +148,65 @@ Not present in this repository (this project is a WinForms desktop app using loc
  - Analytics: ReportService returns SalesReportDTO, displayed in HomeForm
  - Backup/restore: BackupService produces/consumes backup.json
  - If you want, I can also generate a simple diagram (Mermaid) showing: WinForms UI → Services (BLL) →    Repositories/EF Core (DAL) → SQLite.
- 
+
+
+ 1. User Authentication & Authorization
+Login screen: Form1 authenticates users via AuthService.Login(username, password)
+Password security: passwords are hashed with SHA256 (AuthService.HashPassword)
+Role handling: user role is stored in Session.CurrentUser.Role and the dashboard UI changes what actions/forms are shown
+UI checks roles like Admin, Cashier, Prod. Staff (also Prod Staff)
+Note: self-registration (RegisterForm) creates users with the default role User (so if you need Cashier/Prod. Staff, you’d typically change the role in the database)
+
+2. Customer & Product Management
+Customers: add customers through CustomerForm (stored in SQLite via EF Core repositories)
+Products: seeded automatically at startup (e.g., T-Shirt, Cap, Mug, Tote Bag, Notebook)
+
+3. Order Management
+Create orders from OrderForm
+Business rules enforced by OrderService
+Creates Order + OrderItems
+Sets OrderStatus to Pending initially
+Validates allowed statuses when updating (Pending, Processing, Completed, Cancelled)
+Orders are displayed/consumed across the UI and drive workflow state updates
+
+4. Payment System
+Record payments via PaymentForm
+PaymentService logic:
+Validates payment input
+Saves Payment
+Updates the linked OrderStatus:
+Completed when amountPaid >= order.TotalAmount
+otherwise Processing
+Advances workflow tasks immediately using WorkflowService
+
+5. Workflow Tracking
+Workflow tasks are stored in WorkflowTask and updated by WorkflowService
+HomeForm auto-refreshes every ~3 seconds and shows:
+Pending / InProgress / Completed workflow lists
+Workflow state is derived from each order’s OrderStatus
+6. Analytics & Reporting (Dashboard)
+ReportService.GetSalesReportAsync() returns simple metrics:
+Total sales, total orders
+HomeForm builds a sales chart from Payments grouped by date (last 7 days)
+7. Backup / Restore (Internal Service)
+BackupService can export/import backup.json using BackupDTO
+This exists in Services/BackupService.cs, but I don’t see it wired into a UI form in the current project.
+Login Instructions (Desktop App)
+Default Test Accounts (pre-seeded)
+The app seeds only the following user by default on first run:
+
+Username	Password	Role
+admin	admin123	Admin
+Creating Other Accounts
+Use the Sign Up button in the app (RegisterForm)
+Newly registered users get role User by default (not Cashier / Borrower / etc. — those roles don’t exist in this system)
+Admin accounts must be created directly in the database if you want additional Admin users (or you can modify role values after registration)
+How to Run / Login (WinForms)
+Run the desktop app:
+dotnet run --project ITelectFinal.csproj
+Login with:
+admin / admin123
+
 
 
       
