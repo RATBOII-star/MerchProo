@@ -1,0 +1,264 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|c:\\users\\john mones\\source\\repos\\itelectfinal\\itelectfinal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|solutionrelative:itelectfinal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|c:\\users\\john mones\\source\\repos\\itelectfinal\\itelectfinal\\services\\backupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|solutionrelative:itelectfinal\\services\\backupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|c:\\users\\john mones\\source\\repos\\itelectfinal\\itelectfinal\\itelectfinal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|solutionrelative:itelectfinal\\itelectfinal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|c:\\users\\john mones\\source\\repos\\itelectfinal\\itelectfinal\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|solutionrelative:itelectfinal\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|c:\\users\\john mones\\source\\repos\\itelectfinal\\itelectfinal\\form1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|solutionrelative:itelectfinal\\form1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|c:\\users\\john mones\\source\\repos\\itelectfinal\\itelectfinal\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|solutionrelative:itelectfinal\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|c:\\users\\john mones\\source\\repos\\itelectfinal\\itelectfinal\\forms\\customerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|solutionrelative:itelectfinal\\forms\\customerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|C:\\Users\\john mones\\source\\repos\\ITelectFinal\\itelectfinal\\forms\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|solutionrelative:itelectfinal\\forms\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|c:\\users\\john mones\\source\\repos\\itelectfinal\\itelectfinal\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|solutionrelative:itelectfinal\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|c:\\users\\john mones\\source\\repos\\itelectfinal\\itelectfinal\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|solutionrelative:itelectfinal\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|c:\\users\\john mones\\source\\repos\\itelectfinal\\itelectfinal\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|solutionrelative:itelectfinal\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|C:\\Users\\john mones\\source\\repos\\ITelectFinal\\itelectfinal\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|solutionrelative:itelectfinal\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|c:\\users\\john mones\\source\\repos\\itelectfinal\\itelectfinal\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|solutionrelative:itelectfinal\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|c:\\users\\john mones\\source\\repos\\itelectfinal\\itelectfinal\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|solutionrelative:itelectfinal\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|c:\\users\\john mones\\source\\repos\\itelectfinal\\itelectfinal\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EAD025E-2EC4-B3E2-4F2D-25BFF8858F5E}|ITelectFinal\\ITelectFinal.csproj|solutionrelative:itelectfinal\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 120,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BackupService.cs",
+              "DocumentMoniker": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Services\\BackupService.cs",
+              "RelativeDocumentMoniker": "ITelectFinal\\Services\\BackupService.cs",
+              "ToolTip": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Services\\BackupService.cs",
+              "RelativeToolTip": "ITelectFinal\\Services\\BackupService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAgwAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T05:02:36.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ITelectFinal.csproj",
+              "DocumentMoniker": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\ITelectFinal.csproj",
+              "RelativeDocumentMoniker": "ITelectFinal\\ITelectFinal.csproj",
+              "ToolTip": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\ITelectFinal.csproj",
+              "RelativeToolTip": "ITelectFinal\\ITelectFinal.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-19T17:18:58.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CustomerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Repositories\\CustomerRepository.cs",
+              "RelativeDocumentMoniker": "ITelectFinal\\Repositories\\CustomerRepository.cs",
+              "ToolTip": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Repositories\\CustomerRepository.cs",
+              "RelativeToolTip": "ITelectFinal\\Repositories\\CustomerRepository.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T15:02:48.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "ITelectFinal\\Repositories\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "ITelectFinal\\Repositories\\OrderRepository.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:10:25.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "ITelectFinal\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Services\\AuthService.cs",
+              "RelativeToolTip": "ITelectFinal\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:10:23.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "ITelectFinal\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Services\\OrderService.cs",
+              "RelativeToolTip": "ITelectFinal\\Services\\OrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:10:22.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Program.cs",
+              "RelativeDocumentMoniker": "ITelectFinal\\Program.cs",
+              "ToolTip": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Program.cs",
+              "RelativeToolTip": "ITelectFinal\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:10:12.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomerForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Forms\\CustomerForm.Designer.cs",
+              "RelativeDocumentMoniker": "ITelectFinal\\Forms\\CustomerForm.Designer.cs",
+              "ToolTip": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Forms\\CustomerForm.Designer.cs",
+              "RelativeToolTip": "ITelectFinal\\Forms\\CustomerForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:10:09.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "ITelectFinal\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Models\\Order.cs",
+              "RelativeToolTip": "ITelectFinal\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:10:07.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "ITelectFinal\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "ITelectFinal\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T08:26:03.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "ITelectFinal\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Form1.Designer.cs",
+              "RelativeToolTip": "ITelectFinal\\Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T01:42:14.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.resx",
+              "DocumentMoniker": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Form1.resx",
+              "RelativeDocumentMoniker": "ITelectFinal\\Form1.resx",
+              "ToolTip": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Form1.resx",
+              "RelativeToolTip": "ITelectFinal\\Form1.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-03-16T01:42:10.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Form1.cs",
+              "RelativeDocumentMoniker": "ITelectFinal\\Form1.cs",
+              "ToolTip": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Form1.cs",
+              "RelativeToolTip": "ITelectFinal\\Form1.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAnwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T01:41:44.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CustomerForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Forms\\CustomerForm.cs",
+              "RelativeDocumentMoniker": "ITelectFinal\\Forms\\CustomerForm.cs",
+              "ToolTip": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Forms\\CustomerForm.cs [Design]",
+              "RelativeToolTip": "ITelectFinal\\Forms\\CustomerForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T08:45:51.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Form1.cs",
+              "RelativeDocumentMoniker": "ITelectFinal\\Form1.cs",
+              "ToolTip": "C:\\Users\\john mones\\source\\repos\\ITelectFinal\\ITelectFinal\\Form1.cs [Design]",
+              "RelativeToolTip": "ITelectFinal\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T01:20:07.067Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
