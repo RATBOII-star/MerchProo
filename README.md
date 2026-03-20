@@ -22,7 +22,7 @@ It promotes economic growth by
 
 - Reducing manual errors and workload for employees
 
-System Architecture
+**System Architecture**
 
 ├── bin/         
 ├── Data/         
@@ -47,8 +47,10 @@ System Architecture
 ├──RegisterForm.Designer.cs
 
 
-Architecture Layers
-1.    Presentation/ UI Layer
+**Architecture Layers**
+
+Presentation/ UI Layer
+
  
 
 
