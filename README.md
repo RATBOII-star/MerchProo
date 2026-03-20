@@ -49,66 +49,57 @@ It promotes economic growth by
 
 **Architecture Layers**
 
-**1.Data Access Layer**
+### 1. Data Access Layer
 Handles all database operations using Entity Framework Core with SQLite.
 
-- Entities / Domain models
- - Entities in Models\
- - User(Authentication + role).cs
- - Customer.cs
- - Product.cs
- - Order.cs + OrderItem
- - Payment.cs
- - WorkflowTask.cs
+- **Entities/** - Domain models
+  - `User.cs` - (Authentication + role)
+  - `Customer.cs`
+  - `Product.cs`
+  - `Order.cs` + `OrderItem.cs`
+  - `Payment.cs`
+  - `WorkflowTask.cs`
 
-Repositories
-- Located in Repositories/
- - UserRepository.cs
- - CustomerRepository.cs
- - ProductRepository.cs
- - OrderRepository.cs
- - PaymentRepository.cs
- - WorkflowTaskRepository.cs
+- **Repositories/** - Data access patterns
+  - `UserRepository.cs`
+  - `CustomerRepository.cs`
+  - `ProductRepository.cs`
+  - `OrderRepository.cs`
+  - `PaymentRepository.cs`
+  - `WorkflowTaskRepository.cs`
+
+- **Migrations/** - Database schema versioning
    
-2.Business Logix Layer
-Implements business rules and orchestrates reposity/database operations
+### 2. Business Logic Layer (BLL)
+Implements business rules and orchestrates repository/database operations.
 
-Authentication
-- Services/AuthService.cs
- - HashPassword() (SHA256)
- - Login() sets Utils.Session.CurrentUser
- - Register() creates new users with a role
- 
-Order Management
-- Services/Orderservice.cs
- - CreateOrder(...)
- - Validate input
- - Creates Order + OrderItems and sets TotalAmount
- - Creates an initial WorkflowTask if Missing
- - UpdateOrderStatus
- - Enforces allowed Statuses Pending, Processing, Completed, Cancelled
+- **Authentication** - `Services/AuthService.cs`
+  - `HashPassword()` - (SHA256)
+  - `Login()` - Sets `Utils.Session.CurrentUser`
+  - `Register()` - Creates new users with a role
 
-Payment Processing
-- ServicesNewPaymentAsync(...)
- - Validates amount and payment method
+- **Order Management** - `Services/OrderService.cs`
+  - `CreateOrder(...)` - Validates input
+  - Creates `Order` + `OrderItems` and sets `TotalAmount`
+  - Creates an initial `WorkflowTask` if missing
+  - `UpdateOrderStatus` - Enforces allowed statuses: `Pending`, `Processing`, `Completed`, `Cancelled`
 
-Creates Payment
-- Updates the related OrderStatus based on whether it's fully paid
- - Calls WorkflowService to advance worklflow tasks immediat
+- **Payment Processing**
+  - `Services/NewPaymentAsync(...)` - Validates amount and payment method
+  - Creates `Payment` record
+  - Updates the related `OrderStatus` based on whether it's fully paid
+  - Calls `WorkflowService` to advance workflow tasks immediately
 
-Workflow / task progression
-- Services/WorkflowService.cs
- - UpdateWorkflowStatusAsync() updates tasks based on Order.OrderStatus
- - UpdateWorkflowStatusForOrderAsync(orderId) updates tasks for a single order
+- **Workflow / Task Progression** - `Services/WorkflowService.cs`
+  - `UpdateWorkflowStatusAsync()` - Updates tasks based on `Order.OrderStatus`
+  - `UpdateWorkflowStatusForOrderAsync(orderId)` - Updates tasks for a single order
 
-Reporting
-- Services/ReportService.cs
- - GetSalesReportAsync() returns SalesReportDTO (total sales + total orders)
+- **Reporting** - `Services/ReportService.cs`
+  - `GetSalesReportAsync()` - Returns `SalesReportDTO` (total sales + total orders)
 
-Backup/Restore
-- Services/BackupService.cs
- - BackupAsync() writes backup.json using DTOs/BackupDTO.cs
- - RestoreAsync() reads backup.json and rehydrates entities
+- **Backup / Restore** - `Services/BackupService.cs`
+  - `BackupAsync()` - Writes `backup.json` using `DTOs/BackupDTO.cs`
+  - `RestoreAsync()` - Reads `backup.json` and rehydrates entities
 
 3) UI (WinForms Desktop) — root UI + Forms/
 Provides the graphical interface and user flows (login, dashboard, CRUD forms).
@@ -151,23 +142,25 @@ Not present in this repository (this project is a WinForms desktop app using loc
 
 
  1. User Authentication & Authorization
-Login screen: Form1 authenticates users via AuthService.Login(username, password)
-Password security: passwords are hashed with SHA256 (AuthService.HashPassword)
-Role handling: user role is stored in Session.CurrentUser.Role and the dashboard UI changes what actions/forms are shown
+- Login screen: Form1 authenticates users via AuthService.Login(username, password)
+- Password security: passwords are hashed with SHA256 (AuthService.HashPassword)
+- Role handling: user role is stored in Session.CurrentUser.Role and the dashboard UI changes what actions/forms are shown
 UI checks roles like Admin, Cashier, Prod. Staff (also Prod Staff)
-Note: self-registration (RegisterForm) creates users with the default role User (so if you need Cashier/Prod. Staff, you’d typically change the role in the database)
+- Note: self-registration (RegisterForm) creates users with the default role User (so if you need Cashier/Prod. Staff, you’d typically change the role in the database)
 
 2. Customer & Product Management
-Customers: add customers through CustomerForm (stored in SQLite via EF Core repositories)
+
+- Customers: add customers through CustomerForm (stored in SQLite via EF Core repositories)
 Products: seeded automatically at startup (e.g., T-Shirt, Cap, Mug, Tote Bag, Notebook)
 
 3. Order Management
-Create orders from OrderForm
-Business rules enforced by OrderService
-Creates Order + OrderItems
-Sets OrderStatus to Pending initially
-Validates allowed statuses when updating (Pending, Processing, Completed, Cancelled)
-Orders are displayed/consumed across the UI and drive workflow state updates
+
+- Create orders from OrderForm
+- Business rules enforced by OrderService
+- Creates Order + OrderItems
+- Sets OrderStatus to Pending initially
+- Validates allowed statuses when updating (Pending, Processing, Completed, Cancelled)
+- Orders are displayed/consumed across the UI and drive workflow state updates
 
 4. Payment System
 Record payments via PaymentForm
@@ -180,14 +173,18 @@ otherwise Processing
 Advances workflow tasks immediately using WorkflowService
 
 5. Workflow Tracking
+
 Workflow tasks are stored in WorkflowTask and updated by WorkflowService
+
 HomeForm auto-refreshes every ~3 seconds and shows:
 Pending / InProgress / Completed workflow lists
 Workflow state is derived from each order’s OrderStatus
+
 6. Analytics & Reporting (Dashboard)
-ReportService.GetSalesReportAsync() returns simple metrics:
+- ReportService.GetSalesReportAsync() returns simple metrics:
 Total sales, total orders
-HomeForm builds a sales chart from Payments grouped by date (last 7 days)
+- HomeForm builds a sales chart from Payments grouped by date (last 7 days)
+
 7. Backup / Restore (Internal Service)
 BackupService can export/import backup.json using BackupDTO
 This exists in Services/BackupService.cs, but I don’t see it wired into a UI form in the current project.
