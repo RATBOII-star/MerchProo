@@ -25,25 +25,29 @@ It promotes economic growth by
 ### System Architecture
 
 ```text
-├── bin/
-├── Data/
-├── DTO/
-├── Forms/
-├── Models/
-├── obj/
-├── Repositories/
-├── Services/
-├── Utils/
-├── Forms1.cs
-├── Forms1.Designer.cs
-├── Forms1.resx
-├── Homeform.Designer.cs
-├── ItelectFinal.csproj
-├── ItelectFinal.csproj.user
-├── Mydatabase
-├── Program.cs
-├── RegisterForm.cs
-└── RegisterForm.Designer.cs
+ITelectFinal/ (Root)
+├── .vs/
+├── ITelectFinal.slnx
+└── ITelectFinal/ (Project Folder)
+    ├── bin/
+    ├── Data/
+    ├── DTO/
+    ├── Forms/
+    ├── Models/
+    ├── obj/
+    ├── Repositories/
+    ├── Services/
+    ├── Utils/
+    ├── Forms1.cs
+    ├── Forms1.Designer.cs
+    ├── Forms1.resx
+    ├── Homeform.Designer.cs
+    ├── ItelectFinal.csproj
+    ├── ItelectFinal.csproj.user
+    ├── Mydatabase
+    ├── Program.cs
+    ├── RegisterForm.cs
+    └── RegisterForm.Designer.cs
 ```
 
 ---
