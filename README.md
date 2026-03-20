@@ -277,6 +277,22 @@ Default seeded account:
 Role note: self-registration via RegisterForm creates users with default role User (so admin-level screens are only available to seeded/admin users unless you change roles in the DB).
 
 
+#### Group Members and their contributions
+John Vladimir L. Mones
+- Code User Management & Login and the whole Database 
+- Paper Overview and Intro
+John Ivan Valenzona
+- Code Customer & Order Management Form and thier function
+- Paper SDG alignment and Problem Statement
+Marwen De Castro
+- Code POS & Payment Processing the CRUD Operations
+- Paper II. Requirements & Analysis and 3.1 N-Tier Architecture Diagram
+Jaymar Froa
+- Code Customer & Order Management 
+- Paper 3.3 Use Case & Data Flow Diagrams (DFD) and 3.4 Algorithm Flowchart: 
+Micheal Andrei Baluyot
+- Code Workflow Tracking / Production Tasks
+- Paper 3.2 Entity Relationship Diagram (ERD):
       
          
 
