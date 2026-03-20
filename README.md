@@ -108,6 +108,45 @@ Implements business rules and orchestrates reposity/database operations
     BackupAsync() writes backup.json using DTOs/BackupDTO.cs
     RestoreAsync() reads backup.json and rehydrates entities
 
+3) UI (WinForms Desktop) — root UI + Forms/
+Provides the graphical interface and user flows (login, dashboard, CRUD forms).
+
+Entry / navigation
+
+Program.cs
+Initializes exception logging
+Calls Data.DbInitializer.EnsureCreatedAndSeed()
+Launches Form1
+Form1.cs / RegisterForm.cs
+Login and registration UI
+Uses AuthService for authentication
+Main dashboard + live updates
+
+HomeForm.cs
+Role-based visibility (Admin, Cashier, Prod. Staff / Prod Staff)
+Auto-refresh timer (~3 seconds) to:
+Refresh sales chart + summary (uses ReportService and also direct EF queries)
+Refresh workflow board (uses WorkflowService + WorkflowTaskRepository)
+Feature forms
+
+In Forms/:
+Orders: OrderForm.cs, AdminOrdersForm.cs
+Payments: PaymentForm.cs, AdminPaymentsForm.cs
+Customers: CustomerForm.cs
+Workflow tasks: WorkflowTaskForm.cs
+Reports: ReportsForm.cs
+
+4) Forms
+Not present in this repository (this project is a WinForms desktop app using local SQLite).
+
+  Core System Functionality (mapped to the layers)
+- User authentication & role handling: Form1/RegisterForm → AuthService → UserRepository/AppDbContext
+    Order lifecycle: OrderService enforces allowed status transitions + initializes workflow tasks
+    Payment lifecycle: PaymentService records payments, updates order status, advances workflow
+    Workflow tracking: WorkflowService keeps WorkflowTask in sync with OrderStatus
+    Analytics: ReportService returns SalesReportDTO, displayed in HomeForm
+    Backup/restore: BackupService produces/consumes backup.json
+    If you want, I can also generate a simple diagram (Mermaid) showing: WinForms UI → Services (BLL) →    Repositories/EF Core (DAL) → SQLite.
  
 
 
