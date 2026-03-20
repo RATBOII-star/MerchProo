@@ -24,3 +24,75 @@ It promotes economic growth by
 
 System Architecture
 
+ITelectFinal/
+  bin/
+  obj/
+
+  Data/
+    AppDbContext.cs
+    DbInitializer.cs
+    DbPath.cs
+
+  DTOs/
+    BackupDTO.cs
+    SalesReportDTO.cs
+
+  Forms/
+    AdminOrdersForm.cs
+    AdminOrdersForm.Designer.cs
+    AdminPaymentsForm.cs
+    AdminPaymentsForm.Designer.cs
+    CustomerForm.cs
+    CustomerForm.Designer.cs
+    CustomerForm.resx
+    OrderForm.cs
+    OrderForm.Designer.cs
+    PaymentForm.cs
+    PaymentForm.Designer.cs
+    ReportsForm.cs
+    ReportsForm.Designer.cs
+    WorkflowTaskForm.cs
+    WorkflowTaskForm.Designer.cs
+
+  Models/
+    Customer.cs
+    Order.cs
+    OrderItem.cs
+    Payment.cs
+    Product.cs
+    User.cs
+    WorkflowTask.cs
+
+  Repositories/
+    CustomerRepository.cs
+    OrderRepository.cs
+    PaymentRepository.cs
+    ProductRepository.cs
+    UserRepository.cs
+    WorkflowTaskRepository.cs
+
+  Services/
+    AuthService.cs
+    BackupService.cs
+    OrderService.cs
+    PaymentService.cs
+    ReportService.cs
+    WorkflowService.cs
+
+  Utils/
+    Logger.cs
+    Session.cs
+
+  Form1.cs
+  Form1.Designer.cs
+  Form1.resx
+  RegisterForm.cs
+  RegisterForm.Designer.cs
+  HomeForm.cs
+  HomeForm.Designer.cs
+
+  Program.cs
+  ITelectFinal.csproj
+  ITelectFinal.csproj.user
+  Mydatabase.db
+
