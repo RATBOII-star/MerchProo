@@ -153,17 +153,15 @@ graph LR
     DAL --> DB[(SQLite Database)]
 ```
 
- 1. User Authentication & Authorization
-- Login screen: Form1 authenticates users via AuthService.Login(username, password)
-- Password security: passwords are hashed with SHA256 (AuthService.HashPassword)
-- Role handling: user role is stored in Session.CurrentUser.Role and the dashboard UI changes what actions/forms are shown
-UI checks roles like Admin, Cashier, Prod. Staff (also Prod Staff)
-- Note: self-registration (RegisterForm) creates users with the default role User (so if you need Cashier/Prod. Staff, you’d typically change the role in the database)
+### 1. User Authentication & Authorization
+- **Login screen:** `Form1` authenticates users via `AuthService.Login(username, password)`
+- **Password security:** Passwords are hashed with **SHA256** (`AuthService.HashPassword`)
+- **Role handling:** User role is stored in `Session.CurrentUser.Role`; the dashboard UI dynamically changes based on roles like `Admin`, `Cashier`, or `Prod Staff`.
+- **Note:** Self-registration (`RegisterForm`) creates users with the default role `User`. (Elevated roles must be changed directly in the database).
 
-2. Customer & Product Management
-
-- Customers: add customers through CustomerForm (stored in SQLite via EF Core repositories)
-Products: seeded automatically at startup (e.g., T-Shirt, Cap, Mug, Tote Bag, Notebook)
+### 2. Customer & Product Management
+- **Customers:** Add and manage customers through `CustomerForm` (stored in **SQLite** via EF Core repositories).
+- **Products:** Seeded automatically at startup (e.g., `T-Shirt`, `Cap`, `Mug`, `Tote Bag`, `Notebook`).
 
 3. Order Management
 
