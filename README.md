@@ -25,16 +25,15 @@ It promotes economic growth by
 ### System Architecture
 
 ```text
-ITelectFinal/
 ├── bin/
 ├── Data/
 ├── DTO/
 ├── Forms/
-│   └── Models/
+├── Models/
 ├── obj/
 ├── Repositories/
 ├── Services/
-│   └── Utils/
+├── Utils/
 ├── Forms1.cs
 ├── Forms1.Designer.cs
 ├── Forms1.resx
@@ -46,6 +45,7 @@ ITelectFinal/
 ├── RegisterForm.cs
 └── RegisterForm.Designer.cs
 ```
+
 ---
 
 **Architecture Layers**
@@ -207,23 +207,28 @@ Total sales, total orders
 - HomeForm builds a sales chart from Payments grouped by date (last 7 days)
 
 ### 7. Backup / Restore (Internal Service)
-- BackupService can export/import backup.json using BackupDTO
-- This exists in Services/BackupService.cs, but I don’t see it wired into a UI form in the current project.
-- Login Instructions (Desktop App)
-- Default Test Accounts (pre-seeded)
-- The app seeds only the following user by default on first run:
+- `BackupService` can export/import `backup.json` using `BackupDTO`.
+- This exists in `Services/BackupService.cs`, but it is currently an internal service not yet wired into a UI form.
 
-- Username	Password	Role
-- admin	admin123	Admin
-- Creating Other Accounts
-- Use the Sign Up button in the app (RegisterForm)
-- Newly registered users get role User by default (not Cashier / Borrower / etc. — those roles don’t exist in this system)
-- Admin accounts must be created directly in the database if you want additional Admin users (or you can modify role values after registration)
-- How to Run / Login (WinForms)
-- Run the desktop app:
-dotnet run --project ITelectFinal.csproj
-- Login with:
-admin / admin123
+---
+
+### Login Instructions (Desktop App)
+
+#### Default Test Accounts (pre-seeded)
+The app seeds the following administrative user by default on the first run:
+
+| Username | Password | Role |
+| :--- | :--- | :--- |
+| `admin` | `admin123` | `Admin` |
+
+#### Creating Other Accounts
+- Use the **Sign Up** button in the app (`RegisterForm`).
+- Newly registered users are assigned the `User` role by default.
+- **Note:** Roles like `Cashier` or `Borrower` do not exist in this specific system.
+- **Admin Accounts:** Additional admin users must be created directly in the database, or existing roles must be modified manually after registration.
+
+---
+
 
 
 
