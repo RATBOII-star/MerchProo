@@ -126,18 +126,32 @@ Provides the graphical interface and user flows (login, dashboard, CRUD forms).
   - **Workflow tasks:** `WorkflowTaskForm.cs`
   - **Reports:** `ReportsForm.cs`
 
-4) Forms
-Not present in this repository (this project is a WinForms desktop app using local SQLite).
+### 4. Core System Functionality
+Mapped flow across the application layers.
 
-- Core System Functionality (mapped to the layers)
- - User authentication & role handling: Form1/RegisterForm → AuthService → UserRepository/AppDbContext
- - Order lifecycle: OrderService enforces allowed status transitions + initializes workflow tasks
- - Payment lifecycle: PaymentService records payments, updates order status, advances workflow
- - Workflow tracking: WorkflowService keeps WorkflowTask in sync with OrderStatus
- - Analytics: ReportService returns SalesReportDTO, displayed in HomeForm
- - Backup/restore: BackupService produces/consumes backup.json
- - If you want, I can also generate a simple diagram (Mermaid) showing: WinForms UI → Services (BLL) →    Repositories/EF Core (DAL) → SQLite.
+- **User Authentication & Role Handling**
+  - `Form1`/`RegisterForm` → `AuthService` → `UserRepository`/`AppDbContext`
+- **Order Lifecycle**
+  - `OrderService` enforces allowed status transitions + initializes workflow tasks
+- **Payment Lifecycle**
+  - `PaymentService` records payments, updates order status, advances workflow
+- **Workflow Tracking**
+  - `WorkflowService` keeps `WorkflowTask` in sync with `OrderStatus`
+  - Advanced workflow tasks immediately using `WorkflowService`
+- **Analytics & Reporting**
+  - `ReportService` returns `SalesReportDTO`, displayed in `HomeForm`
+- **Backup / Restore**
+  - `BackupService` produces/consumes `backup.json` using `BackupDTO.cs`
 
+---
+
+### System Architecture Flow
+```mermaid
+graph LR
+    UI[WinForms UI] --> BLL[Services / BLL]
+    BLL --> DAL[Repositories / DAL]
+    DAL --> DB[(SQLite Database)]
+```
 
  1. User Authentication & Authorization
 - Login screen: Form1 authenticates users via AuthService.Login(username, password)
