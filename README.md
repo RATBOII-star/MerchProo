@@ -49,7 +49,7 @@ It promotes economic growth by
 
 **Architecture Layers**
 
-**Data Access Layer**
+**1.Data Access Layer**
 
 Entities in Models\
   User(Authentication + role).cs
@@ -58,9 +58,45 @@ Entities in Models\
   Order.cs + OrderItem
   Payment.cs
   WorkflowTask.cs
-  
+
+Repositories
+ Located in Repositories/
+   UserRepository.cs
+   CustomerRepository.cs
+   ProductRepository.cs
+   OrderRepository.cs
+   PaymentRepository.cs
+   WorkflowTaskRepository.cs
+   
        
-       
+2.Business Logix Layer
+Implements business rules and orchestrates reposity/database operations
+
+ Authentication
+   Services/AuthService.cs
+     HashPassword() (SHA256)
+     Login() sets Utils.Session.CurrentUser
+     Register() creates new users with a role
+ 
+ Order Management
+   Services/Orderservice.cs
+     CreateOrder(...)
+     Validate input
+     Creates Order + OrderItems and sets TotalAmount
+     Creates an initial WorkflowTask if Missing
+   UpdateOrderStatus
+     Enforces allowed Statuses Pending, Processing, Completed, Cancelled
+
+  Payment Processing
+   ServicesNewPaymentAsync(...)
+     Validates amount and payment method
+     Creates Payment
+     Updates the related OrderStatus based on whether it's fully paid
+     Calls WorkflowService to advance worklflow tasks immediately
+
+ 
+
+
       
          
 
