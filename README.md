@@ -27,15 +27,18 @@ System Architecture
 ITelectFinal/
   bin/
   obj/
+  
 
   Data/
     AppDbContext.cs
     DbInitializer.cs
     DbPath.cs
+    
 
   DTOs/
     BackupDTO.cs
     SalesReportDTO.cs
+    
 
   Forms/
     AdminOrdersForm.cs
@@ -53,6 +56,7 @@ ITelectFinal/
     ReportsForm.Designer.cs
     WorkflowTaskForm.cs
     WorkflowTaskForm.Designer.cs
+    
 
   Models/
     Customer.cs
@@ -62,6 +66,7 @@ ITelectFinal/
     Product.cs
     User.cs
     WorkflowTask.cs
+    
 
   Repositories/
     CustomerRepository.cs
@@ -70,6 +75,7 @@ ITelectFinal/
     ProductRepository.cs
     UserRepository.cs
     WorkflowTaskRepository.cs
+    
 
   Services/
     AuthService.cs
@@ -78,10 +84,12 @@ ITelectFinal/
     PaymentService.cs
     ReportService.cs
     WorkflowService.cs
+    
 
   Utils/
     Logger.cs
     Session.cs
+    
 
   Form1.cs
   Form1.Designer.cs
@@ -90,6 +98,7 @@ ITelectFinal/
   RegisterForm.Designer.cs
   HomeForm.cs
   HomeForm.Designer.cs
+  
 
   Program.cs
   ITelectFinal.csproj
