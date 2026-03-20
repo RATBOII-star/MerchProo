@@ -14,13 +14,13 @@ The system supports Sustainable Development Goal 8 (Decent Work and Economic Gro
 
 It promotes economic growth by
 
---Streamlining order and payment processes
+- Streamlining order and payment processes
 
---Improving production efficiency through workflow tracking
+- Improving production efficiency through workflow tracking
 
---Supporting business decision-making using sales reports
+- Supporting business decision-making using sales reports
 
---Reducing manual errors and workload for employees
+- Reducing manual errors and workload for employees
 
 System Architecture
 
